@@ -1,6 +1,5 @@
 import Image from "next/image";
-import img from "/Users/Family/3d-rendering-letter-n.jpg"
-
+import img from "./images/3d-rendering-letter-n.jpg"
 
 const page =()=> {
   return (<div className="wrapper ">
