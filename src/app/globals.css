@@ -2,32 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+@layer base {
+    body {
+        @apply text-gray-900;
+    }
   }
-}
+  
+  @layer components {
+    .wrapper {
+      @apply w-80 mt-16 mx-auto rounded-md text-center p-10 shadow-black shadow-xl bg-black;
+      height: 28rem ;
+      
+    }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+    .container {
+      @apply block  mt-2 flex-col;
+    }
+    input[type = "email"] {
+      @apply p-3 rounded-md border text-white border-gray-400 bg-transparent;
+    }
+    button {
+      @apply py-3 rounded-md bg-teal-700 hover:bg-teal-400 text-white;
+    }
   }
-}
